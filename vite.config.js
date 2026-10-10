@@ -12,7 +12,7 @@ export default defineConfig({
       server.middlewares.use(async (req, res, next) => {
         const pathname = new URL(req.url, 'http://localhost').pathname;
         const slug = pathname.replace(/\/index\.html$/, '').replace(/^\/|\/$/g, '');
-        if (!slug || slug === 'index.html' || pathname.includes('.') && pathname !== '/404.html') return next();
+        if (!slug || slug === 'index.html' || pathname.startsWith('/@vite/') || pathname.startsWith('/node_modules/') || pathname.includes('.') && pathname !== '/404.html') return next();
         try {
           const template = await readFile(resolve('index.html'), 'utf8');
           const html = await server.transformIndexHtml(pathname, renderPage(template, slug));

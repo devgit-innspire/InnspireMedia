@@ -312,12 +312,14 @@ h1 em, h2 em, h3 em { color: var(--terracotta); }
 .page-closing h2 em { color: #613726; }
 .page-closing p { max-width: 480px; margin-bottom: 27px; color: #3d3d2b; font-size: 14px; }
 .automation-path { background: var(--yellow); }
+.automation-path .eyebrow--muted, .page-closing .eyebrow--muted { color: #4a440f; }
+.automation-path .eyebrow--muted span, .page-closing .eyebrow--muted span { background: #613726; }
 .automation-path h2 { margin: 23px 0 55px; font-family: var(--serif); font-size: clamp(3.4rem, 5.5vw, 5.4rem); line-height: 0.98; }
 .automation-path h2 em { color: #613726; }
 .automation-flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 23px; list-style: none; padding: 0; margin: 0; }
 .automation-flow li { position: relative; padding-top: 18px; border-top: 1px solid rgba(25, 27, 24, 0.4); }
 .automation-flow li:not(:last-child)::after { content: '→'; position: absolute; top: 9px; right: -17px; color: var(--terracotta); font-size: 15px; }
-.automation-flow li > span { color: var(--terracotta); font-size: 10px; font-weight: 700; }
+.automation-flow li > span { color: #613726; font-size: 10px; font-weight: 700; }
 .automation-flow h3 { margin: 25px 0 10px; font-family: var(--serif); font-size: 26px; line-height: 1; }
 .automation-flow p { margin: 0; color: #3d3d2b; font-size: 11px; line-height: 1.6; }
 .prose { max-width: 560px; color: var(--ink-soft); font-size: 16px; line-height: 1.9; }
